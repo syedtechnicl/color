@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background</title>
+  </head>
+  <body>
+    <br />
+    <div class="container p-5 bg bg-white rounded">
+      <div class="row">
+        <button id="red" class="m-1 btn btn-outline-danger" title="red">
+          red
+        </button>
+        <button id="green" class="m-1 btn btn-outline-success" title="green">
+          green
+        </button>
+        <button id="blue" class="m-1 btn btn-outline-info" title="blue">
+          blue
+        </button>
+        <button
+          id="purple"
+          class="m-1 btn btn-outline-secondary"
+          title="purple"
+        >
+          purple
+        </button>
+        <button id="orange" class="m-1 btn btn-outline-warning" title="orange">
+          orange
+        </button>
+        <button id="yellow" class="m-1 btn btn-outline-warning" title="yellow">
+          yellow
+        </button>
+        <button id="golden" class="m-1 btn btn-outline-dark" title="golden">
+          golden
+        </button>
+      </div>
+    </div>
+
+    <h1
+      id="text"
+      style="
+        font-weight: bold;
+        font-size: 120px;
+        text-align: center;
+        text-transform: capitalize;
+      "
+    >
+      Background is white
+    </h1>
+
+    <script>
+      const red = document.querySelector("#red");
+      const green = document.querySelector("#green");
+      const blue = document.querySelector("#blue");
+      const purple = document.querySelector("#purple");
+      const orange = document.querySelector("#orange");
+      const yellow = document.querySelector("#yellow");
+      const golden = document.querySelector("#golden");
+
+      const text = document.querySelector("#text");
+
+      const colors = {
+        Rcol: () => {
+          document.body.style.backgroundColor = "red";
+          text.innerHTML = "you clicked red";
+          text.style.color = "#fff";
+          document.title = "red";
+        },
+        GGcol: () => {
+          document.body.style.backgroundColor = "green";
+          text.innerHTML = "you clicked green";
+          text.style.color = "#fff";
+          document.title = "green";
+        },
+        Bcol: () => {
+          document.body.style.backgroundColor = "blue";
+          text.innerHTML = "you clicked blue";
+          text.style.color = "#fff";
+          document.title = "blue";
+        },
+        Pcol: () => {
+          document.body.style.backgroundColor = "#800080";
+          text.innerHTML = "you clicked purple";
+          text.style.color = "#fff";
+          document.title = "purple";
+        },
+        Ocol: () => {
+          document.body.style.backgroundColor = "#ffa500";
+          text.innerHTML = "you clicked orange";
+          text.style.color = "#fff";
+          document.title = "orange";
+        },
+        Ycol: () => {
+          document.body.style.backgroundColor = "#FFFF00";
+          text.innerHTML = "you clicked yellow";
+          text.style.color = "#fff";
+          document.title = "yellow";
+        },
+        Gcol: () => {
+          document.body.style.backgroundColor = "#ffd700";
+          text.innerHTML = "you clicked golden";
+          text.style.color = "#fff";
+          document.title = "golden";
+        },
+      };
+
+      red.addEventListener("click", colors.Rcol);
+      green.addEventListener("click", colors.GGcol);
+      blue.addEventListener("click", colors.Bcol);
+      purple.addEventListener("click", colors.Pcol);
+      orange.addEventListener("click", colors.Ocol);
+      yellow.addEventListener("click", colors.Ycol);
+      golden.addEventListener("click", colors.Gcol);
+    </script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </body>
+</html>
